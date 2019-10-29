@@ -3,7 +3,7 @@
 #include "cube.h"
 #include "led.h"
 
-
+const int delay_time = 0.1;
 
 /////////////////////////////////////////////TURN ON FACE FUNCTION////////////////////////////////////
 void cube::faceON(int face_number) {
@@ -13,7 +13,7 @@ void cube::faceON(int face_number) {
     for (int x = 0; x < 16; x++)
     {
       LED.turnON(x, face_number);
-      delay(0.1);
+      delay(delay_time);
       digitalWrite(inhib2, HIGH);
       digitalWrite(inhib, HIGH);
     }
@@ -21,7 +21,7 @@ void cube::faceON(int face_number) {
     for (int y = 1; y < 5; y++) {
       for ( int x = 0; x < 4; x++) {
         LED.turnON(x, y);
-        delay(0.1);
+        delay(delay_time);
         digitalWrite(inhib2, HIGH);
         digitalWrite(inhib, HIGH);
       }
@@ -30,7 +30,7 @@ void cube::faceON(int face_number) {
     for (int y = 1; y < 5; y++) {
       for ( int x = 4; x < 8; x++) {
         LED.turnON(x, y);
-        delay(0.1);
+        delay(delay_time);
         digitalWrite(inhib2, HIGH);
         digitalWrite(inhib, HIGH);
       }
@@ -39,7 +39,7 @@ void cube::faceON(int face_number) {
     for (int y = 1; y < 5; y++) {
       for ( int x = 8; x < 12; x++) {
         LED.turnON(x, y);
-        delay(0.1);
+        delay(delay_time);
         digitalWrite(inhib2, HIGH);
         digitalWrite(inhib, HIGH);
       }
@@ -48,7 +48,7 @@ void cube::faceON(int face_number) {
     for (int y = 1; y < 5; y++) {
       for ( int x = 12; x < 16; x++) {
         LED.turnON(x, y);
-        delay(0.1);
+        delay(delay_time);
         digitalWrite(inhib2, HIGH);
         digitalWrite(inhib, HIGH);
       }
@@ -57,7 +57,7 @@ void cube::faceON(int face_number) {
     for (int y = 1; y < 5; y++) {
       for ( int x = 0; x < 13; x = x + 4) {
         LED.turnON(x, y);
-        delay(0.1);
+        delay(delay_time);
         digitalWrite(inhib2, HIGH);
         digitalWrite(inhib, HIGH);
       }
@@ -66,7 +66,7 @@ void cube::faceON(int face_number) {
     for (int y = 1; y < 5; y++) {
       for ( int x = 1; x < 14; x = x + 4) {
         LED.turnON(x, y);
-        delay(0.1);
+        delay(delay_time);
         digitalWrite(inhib2, HIGH);
         digitalWrite(inhib, HIGH);
       }
@@ -75,7 +75,7 @@ void cube::faceON(int face_number) {
     for (int y = 1; y < 5; y++) {
       for ( int x = 2; x < 15; x = x + 4) {
         LED.turnON(x, y);
-        delay(0.1);
+        delay(delay_time);
         digitalWrite(inhib2, HIGH);
         digitalWrite(inhib, HIGH);
       }
@@ -84,7 +84,7 @@ void cube::faceON(int face_number) {
     for (int y = 1; y < 5; y++) {
       for ( int x = 3; x < 16; x = x + 4) {
         LED.turnON(x, y);
-        delay(0.1);
+        delay(delay_time);
         digitalWrite(inhib2, HIGH);
         digitalWrite(inhib, HIGH);
       }
@@ -98,7 +98,7 @@ void cube::LOOP(int cube[]) {
   for (int y = 4; y < 6; y++) {
     for ( int x = 0; x < 4; x++) {
       LED.turnON(cube[x], cube[y]);
-      delay(0.1);
+      delay(delay_time);
       digitalWrite(inhib2, HIGH);
       digitalWrite(inhib, HIGH);
     }
@@ -173,7 +173,7 @@ void cube::LOOP2(int cube[]) {
   for (int y = 1; y < 4; y++) {
     for ( int x = 0; x < 9; x++) {
       LED.turnON(cube[x], y);
-      delay(0.1);
+      delay(delay_time);
       digitalWrite(inhib2, HIGH);
       digitalWrite(inhib, HIGH);
     }
@@ -281,7 +281,7 @@ void cube::ONtimed(int Time) {
     for (int y = 1; y < 5; y++) {
       for ( int x = 0; x < 16; x++) {
         LED.turnON(x, y);
-        delay(0.1);
+        delay(delay_time);
         digitalWrite(inhib2, HIGH);
         digitalWrite(inhib, HIGH);
       }
